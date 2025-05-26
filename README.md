@@ -9,7 +9,7 @@ _EcoHabitats_ es una plataforma distribuida orientada a la gestión ecológica d
 
 ## 🔗 Enlaces de interés
 
-### 📁 Repositorios del proyecto
+### Repositorios del proyecto
 
 - [user-service](https://github.com/ecoHabitat-final-project/user-service) – Gestión de usuarios
 - [habitat-service](https://github.com/ecoHabitat-final-project/habitat-service) – Gestión de viviendas
@@ -89,12 +89,12 @@ La comunicación entre microservicios se realiza a través de **Feign Clients**,
 ##  Estado actual del desarrollo
 
 ✔️ Eureka funcionando correctamente  
-✔️ Comunicación entre servicios validada  
-✔️ Catálogo ecológico funcional con datos reales  
-✔️ Implementación de Feign en `catalog-service`  
+ Comunicación entre servicios validada  
+ Catálogo ecológico funcional con datos reales  
+ Implementación de Feign en `catalog-service`  
 ✔️ Arquitectura modular y documentación clara  
-🚧 Gateway en fase de configuración final  
-🚧 Test unitarios y Postman en desarrollo
+ Gateway en fase de configuración final  
+✔️ Test unitarios y Postman en desarrollo
 
 ---
 
