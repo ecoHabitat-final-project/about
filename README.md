@@ -1,9 +1,11 @@
 
-
+<p align="center">
+  <img src="./img/banner.PNG" alt="baner EcoHabitats" width="400"/>
+</p>
 
 # EcoHabitats 
 
-_EcoHabitats_ es una plataforma distribuida orientada a la gestión ecológica de viviendas, desarrollada bajo una arquitectura de microservicios utilizando Java 21, Spring Boot 3.4.3, Eureka y Feign. Este proyecto responde a la necesidad creciente de concienciación medioambiental, permitiendo registrar y consultar acciones ecológicas aplicadas a inmuebles particulares.
+_EcoHabitats_ es una plataforma distribuida orientada a la gestión ecológica de viviendas, desarrollada bajo una arquitectura de microservicios utilizando Java 21, Spring Boot 3.4.3, Eureka y Feign. Este proyecto responde a la finalización de formación IronHack.
 
 ---
 
@@ -45,9 +47,8 @@ Este proyecto se compone de **cuatro microservicios**:
 | `discovery-service`    | 8081   | Servidor Eureka para el descubrimiento de servicios                         |
 | `user-service`         | 8082   | Gestión de usuarios                                                         |
 | `habitat-service`      | 8083   | Gestión de viviendas                                                        |
-| `ecoaction-service`    | 8084   | Gestión de acciones ecológicas vinculadas a una vivienda                   |
-| `catalog-service`      | 8085   | Catálogo que agrupa información desde los demás servicios                  |
-endpoints                  |
+| `ecoaction-service`    | 8084   | Gestión de acciones ecológicas vinculadas a una vivienda  (catálogo)                 |
+                |
 
 ---
 
@@ -70,9 +71,10 @@ endpoints                  |
 
 ##  Entidades Principales
 
-```plaintext
-[User] 1---1 [Habitat] 1---1 [EcoAction]
-```
+<p align="center">
+  <img src="./img/diagramUML.png" alt="Diagrama de clases EcoHabitats" width="300"/>
+</p>
+
 
 - `User`: contiene datos básicos como nombre, email y ciudad.
 - `Habitat`: representa una vivienda, asociada a un usuario.
@@ -89,11 +91,11 @@ La comunicación entre microservicios se realiza a través de **Feign Clients**,
 ##  Estado actual del desarrollo
 
 ✔️ Eureka funcionando correctamente  
- Comunicación entre servicios validada  
- Catálogo ecológico funcional con datos reales  
- Implementación de Feign en `catalog-service`  
+✔️ Comunicación entre servicios validada  
+✔️ Catálogo ecológico funcional  
+✔️ Implementación de Feign en `ecoaction-service`  
 ✔️ Arquitectura modular y documentación clara  
- Gateway en fase de configuración final  
+✔️ Gateway configurado   
 ✔️ Test unitarios y Postman en desarrollo
 
 ---
@@ -113,8 +115,7 @@ La comunicación entre microservicios se realiza a través de **Feign Clients**,
 1. Iniciar `discovery-service` (`localhost:8081`)
 2. (Opcional) Lanzar `gateway-service` en el puerto 8080
 3. Lanzar `user-service`, `habitat-service` y `ecoaction-service`
-4. Lanzar `catalog-service`
-5. Consultar endpoints desde Postman
+4. Consultar endpoints desde Postman
 
 ---
 
