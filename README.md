@@ -5,11 +5,11 @@
 
 # EcoHabitats 
 
-_EcoHabitats_ es una plataforma distribuida orientada a la gestión ecológica de viviendas, desarrollada bajo una arquitectura de microservicios utilizando Java 21, Spring Boot 3.4.3, Eureka y Feign. Este proyecto responde a la finalización de formación IronHack.
+_EcoHabitats_ es una plataforma distribuida orientada a la gestión eficiente de viviendas, desarrollada bajo una arquitectura de microservicios utilizando Java 21, Spring Boot 3.4.3, Eureka y Feign. Este proyecto responde a la finalización de formación IronHack.
 
 ---
 
-## 🔗 Enlaces de interés
+## Enlaces de interés
 
 ### Repositorios del proyecto
 
@@ -19,16 +19,18 @@ _EcoHabitats_ es una plataforma distribuida orientada a la gestión ecológica d
 - [gateway-server](https://github.com/ecoHabitat-final-project/gateway-server) – Gateway API para enrutar peticiones
 - [discovery-server](https://github.com/ecoHabitat-final-project/discovery-server) – Eureka Server (registro de microservicios)
 
-### 🗂️ Gestión del proyecto
+### Gestión del proyecto
 
 - [Trello - EcoHabitats](https://trello.com/b/oPsZsgzm/ecohabitats) – Planificación, seguimiento y organización de tareas
 
-
+ ### Presentación del proyecto
+ - [Presentación](https://) – Explicación con slides
 
 ##  Objetivo del Proyecto
 
-Construir un sistema escalable y mantenible que permita:
+Construir un sistema escalable mediante el uso de microservicios ApiREST que permita:
 
+- Registrar usuarios (user).
 - Registrar viviendas (habitats).
 - Asociar acciones ecológicas realizadas en cada una.
 - Consultar catálogos ecológicos por vivienda.
@@ -96,13 +98,14 @@ La comunicación entre microservicios se realiza a través de **Feign Clients**,
 ✔️ Implementación de Feign en `ecoaction-service`  
 ✔️ Arquitectura modular y documentación clara  
 ✔️ Gateway configurado   
-✔️ Test unitarios y Postman en desarrollo
+✔️ Test unitarios, mock, mockMVC y Postman
 
 ---
 
 ## Futuras mejoras
 
 - Incorporar autenticación básica para usuarios.
+- Incorporar vlidaciones de datos.
 - Añadir acciones ecológicas personalizadas.
 - Exponer métricas de eficiencia ecológica.
 - Crear dashboards con datos estadísticos.
@@ -118,6 +121,19 @@ La comunicación entre microservicios se realiza a través de **Feign Clients**,
 4. Consultar endpoints desde Postman
 
 ---
+
+## Ejemplos Postman
+### 📸 Pruebas funcionales con Postman
+
+Las siguientes capturas ilustran la correcta ejecución de las operaciones principales del microservicio `ecoaction-service` utilizando Postman:
+
+| Operación                         | Descripción                                      | Captura                                                                 |
+|----------------------------------|--------------------------------------------------|-------------------------------------------------------------------------|
+| `POST /api/ecoaction`            | Crear una nueva ecoacción                        | ![Crear Ecoaction](./img/postman_createEcoaction.PNG)                      |
+| `GET /api/ecoaction/{id}`        | Consultar ecoacción con datos enriquecidos       | ![Get Ecoaction](./img/postman_getEcoaction.PNG)                           |
+| `POST /api/ecoaction/habitat`    | Registrar nuevo hábitat desde el catálogo        | ![Crear Habitat](./img/postman_createEcoaction_habitat.PNG)                |
+| `DELETE /api/ecoaction/delete/9` | Eliminar ecoacción                               | ![Delete Ecoaction](./img/postman_deleteEcoaction.PNG)                     |
+
 
 ## Autor
 
