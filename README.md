@@ -32,7 +32,7 @@ Construir un sistema escalable mediante el uso de microservicios ApiREST que per
 
 - Registrar usuarios (user).
 - Registrar viviendas (habitats).
-- Asociar acciones ecológicas realizadas en cada una.
+- Asociar acciones ecológicas realizadas en cada una (ecoaction).
 - Consultar catálogos ecológicos por vivienda.
 - Facilitar la comunicación entre servicios mediante **Eureka** y **OpenFeign**.
 - Gestionar la infraestructura de manera desacoplada con **Spring Cloud Gateway**.
@@ -41,7 +41,7 @@ Construir un sistema escalable mediante el uso de microservicios ApiREST que per
 
 ##  Arquitectura
 
-Este proyecto se compone de **cuatro microservicios**:
+Este proyecto se compone de **cinco microservicios**:
 
 | Servicio               | Puerto | Descripción                                                                 |
 |------------------------|--------|-----------------------------------------------------------------------------|
@@ -57,7 +57,7 @@ Este proyecto se compone de **cuatro microservicios**:
 ##  Tecnologías y herramientas utilizadas
 
 - Java 21
-- Spring Boot 3.4.3
+- Spring Boot 
 - Spring Data JPA
 - Spring Cloud Eureka
 - OpenFeign
@@ -78,8 +78,8 @@ Este proyecto se compone de **cuatro microservicios**:
 </p>
 
 
-- `User`: contiene datos básicos como nombre, email y ciudad.
-- `Habitat`: representa una vivienda, asociada a un usuario.
+- `User`: contiene datos básicos como nombre, email.
+- `Habitat`: representa una vivienda, contiene location y type (piso, chalet, casa baja...)
 - `EcoAction`: registra una mejora ecológica puntual en una vivienda (como instalación solar, aislamiento térmico, etc.).
 
 ---
