@@ -50,7 +50,7 @@ Este proyecto se compone de **cinco microservicios**:
 | `user-service`         | 8082   | Gestión de usuarios                                                         |
 | `habitat-service`      | 8083   | Gestión de viviendas                                                        |
 | `ecoaction-service`    | 8084   | Gestión de acciones ecológicas vinculadas a una vivienda  (catálogo)                 |
-                |
+
 
 ---
 
