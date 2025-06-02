@@ -1,0 +1,626 @@
+{
+	"info": {
+		"_postman_id": "b188cf4d-5816-4651-bc01-0b7ef09cd299",
+		"name": "EcoHabitat",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44394274"
+	},
+	"item": [
+		{
+			"name": "user-service 8082",
+			"item": [
+				{
+					"name": "[All Users]   /user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/api/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/user/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/api/user/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \r\n    \"name\": \"Frank Crespo\",\r\n    \"email\": \"fc@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/api/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update  Email",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{        \r\n    \"email\": \"fcro@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/user/update/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"update",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \r\n    \"name\": \"Frank Crespo\",\r\n    \"email\": \"fc@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/user/delete/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"delete",
+								"8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "habitat-service 8083",
+			"item": [
+				{
+					"name": "Get All Habitats",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{gateway}}/api/habitat",
+							"host": [
+								"{{gateway}}"
+							],
+							"path": [
+								"api",
+								"habitat"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Habitat by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{gateway}}/api/habitat/2",
+							"host": [
+								"{{gateway}}"
+							],
+							"path": [
+								"api",
+								"habitat",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Habitat",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \r\n    \"location\": \"Bilbao\",\r\n    \"type\": \"Vivienda\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/habitat",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"habitat"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cambiar tipo",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"type\": \"Casa baja\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/habitat/update/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"habitat",
+								"update",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Habitat",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"location\": \"Asturias\",\r\n    \"type\": \"Casa baja\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{gateway}}/api/habitat/delete/6",
+							"host": [
+								"{{gateway}}"
+							],
+							"path": [
+								"api",
+								"habitat",
+								"delete",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ecoaction 8084",
+			"item": [
+				{
+					"name": "All Ecoactions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/ecoaction",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"ecoaction"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Id Ecoaction",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Código 200 OK\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Contiene campo 'id'\", function () {\r",
+									"    const jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.have.property(\"id\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Contiene campo 'date'\", function () {\r",
+									"    const jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.have.property(\"date\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Contiene campo 'description'\", function () {\r",
+									"    const jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.have.property(\"description\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Contiene campo 'location'\", function () {\r",
+									"    const jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.have.property(\"location\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Contiene campo 'type'\", function () {\r",
+									"    const jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.have.property(\"type\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Contiene campo 'userName'\", function () {\r",
+									"    const jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.have.property(\"userName\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Contiene campo 'email'\", function () {\r",
+									"    const jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.have.property(\"email\");\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{gateway}}/api/ecoaction/2",
+							"host": [
+								"{{gateway}}"
+							],
+							"path": [
+								"api",
+								"ecoaction",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Ecoaction",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"habitatId\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{gateway}}/api/ecoaction/delete/7",
+							"host": [
+								"{{gateway}}"
+							],
+							"path": [
+								"api",
+								"ecoaction",
+								"delete",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ecoaction by UserId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{gateway}}/api/ecoaction/user/1",
+							"host": [
+								"{{gateway}}"
+							],
+							"path": [
+								"api",
+								"ecoaction",
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ecoaction by HabitatId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{gateway}}/api/ecoaction/habitat/1",
+							"host": [
+								"{{gateway}}"
+							],
+							"path": [
+								"api",
+								"ecoaction",
+								"habitat",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "test Copy",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Cambio Habitat",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"habitatId\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{gateway}}/api/ecoaction/update/3",
+							"host": [
+								"{{gateway}}"
+							],
+							"path": [
+								"api",
+								"ecoaction",
+								"update",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear EcoAction",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Código 200 OK\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Contiene campo 'id'\", function () {\r",
+									"    const jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.have.property(\"id\");\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"description\": \"Automatic blinds\",\r\n    \"date\": \"2025-05_29\",\r\n    \"type\": \"Chalet\",\r\n    \"userId\": 6,\r\n    \"habitatId\": 6\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{gateway}}/api/ecoaction",
+							"host": [
+								"{{gateway}}"
+							],
+							"path": [
+								"api",
+								"ecoaction"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear  User",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Código 200 OK\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Contiene campo 'id'\", function () {\r",
+									"    const jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData).to.have.property(\"name\");\r",
+									"     pm.expect(jsonData).to.have.property(\"email\")\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \"name\": \"Paco Pau\",\r\n    \"email\": \"ppau@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{gateway}}/api/ecoaction/user",
+							"host": [
+								"{{gateway}}"
+							],
+							"path": [
+								"api",
+								"ecoaction",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear  Habitat",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Código 200 OK\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Contiene campo 'location'\", function () {\r",
+									"    const jsonData = pm.response.json();  \r",
+									"     pm.expect(jsonData).to.have.property(\"location\")\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Contiene campo 'type'\", function () {\r",
+									"    const jsonData = pm.response.json();  \r",
+									"     pm.expect(jsonData).to.have.property(\"type\")\r",
+									"});\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"location\": \"Valverde\",\r\n    \"type\": \"Caserón\"\r\n}\r\n    \r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{gateway}}/api/ecoaction/habitat",
+							"host": [
+								"{{gateway}}"
+							],
+							"path": [
+								"api",
+								"ecoaction",
+								"habitat"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
