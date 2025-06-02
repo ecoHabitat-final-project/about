@@ -24,7 +24,7 @@ _EcoHabitats_ es una plataforma distribuida orientada a la gestión eficiente de
 - [Trello - EcoHabitats](https://trello.com/b/oPsZsgzm/ecohabitats) – Planificación, seguimiento y organización de tareas
 
  ### Presentación del proyecto
- - [Presentación](https://) – Explicación con slides
+ - [Presentación](https://docs.google.com/presentation/d/1Q7BE8iLgBvRChM2KIZAAd48HhG39uIkB/edit?usp=sharing&ouid=114670183977495007435&rtpof=true&sd=true) – Explicación con slides
 
 ##  Objetivo del Proyecto
 
