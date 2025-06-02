@@ -143,5 +143,36 @@ Formación en Spring Boot & Microservicios by IronHack
 GitHub: [github.com/peterparker79](https://github.com/peterParker79)
 
 ---
+### Colección Postman: EcoHabitat
 
+El proyecto cuenta con una colección Postman  para facilitar la prueba y verificación de los endpoints REST de cada microservicio a través del gateway.
+
+La colección incluye las siguientes operaciones agrupadas por servicio:
+
+| Microservicio        | Método | Ruta                               | Descripción breve                          |
+|----------------------|--------|------------------------------------|--------------------------------------------|
+| **user-service**     | GET    | `/api/user`                        | Obtener todos los usuarios                 |
+|                      | GET    | `/api/user/{id}`                   | Obtener usuario por ID                     |
+|                      | POST   | `/api/user`                        | Crear usuario                              |
+|                      | PATCH  | `/api/user/update/{id}`           | Actualizar email del usuario               |
+|                      | DELETE | `/api/user/delete/{id}`           | Eliminar usuario                           |
+| **habitat-service**  | GET    | `/api/habitat`                     | Obtener todos los hábitats                 |
+|                      | GET    | `/api/habitat/{id}`               | Obtener hábitat por ID                     |
+|                      | POST   | `/api/habitat`                    | Crear nuevo hábitat                        |
+|                      | PATCH  | `/api/habitat/update/{id}`       | Cambiar tipo de hábitat                    |
+|                      | DELETE | `/api/habitat/delete/{id}`       | Eliminar hábitat                           |
+| **ecoaction-service**| GET    | `/api/ecoaction`                  | Obtener todas las ecoacciones              |
+|                      | GET    | `/api/ecoaction/{id}`            | Obtener ecoacción por ID                   |
+|                      | GET    | `/api/ecoaction/user/{id}`       | Ecoacciones por usuario                    |
+|                      | GET    | `/api/ecoaction/habitat/{id}`    | Ecoacciones por hábitat                    |
+|                      | POST   | `/api/ecoaction`                 | Crear ecoacción                            |
+|                      | PATCH  | `/api/ecoaction/update/{id}`     | Modificar hábitat de ecoacción             |
+|                      | DELETE | `/api/ecoaction/delete/{id}`     | Eliminar ecoacción                         |
+|                      | POST   | `/api/ecoaction/user`            | Crear usuario desde el catálogo            |
+|                      | POST   | `/api/ecoaction/habitat`         | Crear hábitat desde el catálogo            |
+
+Algunos endpoints contienen **tests automáticos Postman** para validar estructura de la respuesta (campos esperados, códigos HTTP, etc.).
+
+- - - 
 > “Desarrollar conciencia ecológica no es sólo cuestión de hábitos, sino de software que los promueva.”
+- - - 
